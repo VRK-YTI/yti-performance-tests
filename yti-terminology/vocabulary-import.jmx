@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.1.1 r1855137">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Codelist import test plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="terminologyHostname" elementType="Argument">
+            <stringProp name="Argument.name">terminologyHostname</stringProp>
+            <stringProp name="Argument.value">sanastot.dev.yti.cloud.vrk.fi</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port" elementType="Argument">
+            <stringProp name="Argument.name">port</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="protocol" elementType="Argument">
+            <stringProp name="Argument.name">protocol</stringProp>
+            <stringProp name="Argument.value">https</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="threadCount" elementType="Argument">
+            <stringProp name="Argument.name">threadCount</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="loopCount" elementType="Argument">
+            <stringProp name="Argument.name">loopCount</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="rampUp" elementType="Argument">
+            <stringProp name="Argument.name">rampUp</stringProp>
+            <stringProp name="Argument.value">0</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="codeSchemeCodeValue" elementType="Argument">
+            <stringProp name="Argument.name">codeSchemeCodeValue</stringProp>
+            <stringProp name="Argument.value">test</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="testCodeRegistryCodeValue" elementType="Argument">
+            <stringProp name="Argument.name">testCodeRegistryCodeValue</stringProp>
+            <stringProp name="Argument.value">test</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="contentTypeHeader" elementType="Argument">
+            <stringProp name="Argument.name">contentTypeHeader</stringProp>
+            <stringProp name="Argument.value">application/json;charset=UTF-8</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="graphId" elementType="Argument">
+            <stringProp name="Argument.name">graphId</stringProp>
+            <stringProp name="Argument.value">0f3d709d-f7f1-4edb-8d8a-a6545b275596</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="templateGraphId" elementType="Argument">
+            <stringProp name="Argument.name">templateGraphId</stringProp>
+            <stringProp name="Argument.value">61cf6bde-46e6-40bb-b465-9b2c66bf4ad8</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Accept</stringProp>
+            <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Content-Type</stringProp>
+            <stringProp name="Header.value">application/json</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain"></stringProp>
+        <stringProp name="HTTPSampler.port"></stringProp>
+        <stringProp name="HTTPSampler.protocol"></stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout">5000</stringProp>
+        <stringProp name="HTTPSampler.response_timeout">180000</stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">${loopCount}</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${threadCount}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${rampUp}</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request: Fake login" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="fake.login.mail_threaded" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">perftest0${__threadNum}@localhost</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">fake.login.mail_threaded</stringProp>
+              </elementProp>
+              <elementProp name="fake.login.mail" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">testiadmin@localhost</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">fake.login.mail</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${terminologyHostname}</stringProp>
+          <stringProp name="HTTPSampler.port">${port}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/frontend/authenticated-user</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">true</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="testuserEmail" elementType="Argument">
+                <stringProp name="Argument.name">testuserEmail</stringProp>
+                <stringProp name="Argument.value">perftest${__threadNum}@localhost</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </Arguments>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request: Create vocabulary" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;id&quot;:&quot;e5410e09-0b57-4be1-96e4-183593ef514c&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;TerminologicalVocabulary&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2004/02/skos/core#ConceptScheme&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;${templateGraphId}&quot;}},&quot;createdBy&quot;:&quot;&quot;,&quot;createdDate&quot;:&quot;2019-09-12T11:54:36.590Z&quot;,&quot;lastModifiedBy&quot;:&quot;&quot;,&quot;lastModifiedDate&quot;:&quot;2019-09-12T11:54:36.590Z&quot;,&quot;properties&quot;:{&quot;prefLabel&quot;:[{&quot;lang&quot;:&quot;fi&quot;,&quot;value&quot;:&quot;000&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;description&quot;:[],&quot;language&quot;:[{&quot;lang&quot;:&quot;&quot;,&quot;value&quot;:&quot;fi&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;},{&quot;lang&quot;:&quot;&quot;,&quot;value&quot;:&quot;en&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;},{&quot;lang&quot;:&quot;&quot;,&quot;value&quot;:&quot;sv&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;status&quot;:[{&quot;lang&quot;:&quot;&quot;,&quot;value&quot;:&quot;DRAFT&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;priority&quot;:[{&quot;lang&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}]},&quot;referrers&quot;:{},&quot;references&quot;:{&quot;contributor&quot;:[{&quot;id&quot;:&quot;74a41211-8c99-4835-a519-7a61612b1098&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Organization&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;228cce1e-8360-4039-a3f7-725df5643354&quot;}}}],&quot;inGroup&quot;:[{&quot;id&quot;:&quot;9ba19f8d-d688-39cc-b620-ebb7875e6e9b&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Group&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;7f4cb68f-31f6-4bf9-b699-9d72dd110c4c&quot;}}}]}}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${terminologyHostname}</stringProp>
+          <stringProp name="HTTPSampler.port">${port}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/frontend/vocabulary?templateGraphId=${templateGraphId}&amp;prefix=${__threadNum}</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor: Extract vocabularyId" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">vocabularyId</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;(.*?)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default"></stringProp>
+            <stringProp name="RegexExtractor.match_number"></stringProp>
+            <stringProp name="Sample.scope">all</stringProp>
+            <stringProp name="Scope.variable">vocabularyId</stringProp>
+            <boolProp name="RegexExtractor.default_empty_value">true</boolProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request: Get vocabulary" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="graphId" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${vocabularyId}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">graphId</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${terminologyHostname}</stringProp>
+          <stringProp name="HTTPSampler.port">${port}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/frontend/vocabulary</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">true</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request: Import vocabulary" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;delete&quot;:[],&quot;save&quot;:[{&quot;id&quot;:&quot;81923f05-ca33-4208-8842-85643b758686&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}},&quot;createdBy&quot;:&quot;&quot;,&quot;createdDate&quot;:&quot;2019-09-12T13:23:18.106Z&quot;,&quot;lastModifiedBy&quot;:&quot;&quot;,&quot;lastModifiedDate&quot;:&quot;2019-09-12T13:23:18.106Z&quot;,&quot;properties&quot;:{&quot;prefLabel&quot;:[{&quot;lang&quot;:&quot;fi&quot;,&quot;value&quot;:&quot;Merkurius&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;source&quot;:[],&quot;scope&quot;:[],&quot;termStyle&quot;:[],&quot;termFamily&quot;:[],&quot;termConjugation&quot;:[],&quot;termEquivalency&quot;:[],&quot;termInfo&quot;:[],&quot;wordClass&quot;:[],&quot;termHomographNumber&quot;:[],&quot;editorialNote&quot;:[],&quot;draftComment&quot;:[],&quot;historyNote&quot;:[],&quot;changeNote&quot;:[],&quot;status&quot;:[]},&quot;referrers&quot;:{},&quot;references&quot;:{}},{&quot;id&quot;:&quot;cc8a41aa-a2a2-44a0-a8e9-60e34426e8f3&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}},&quot;createdBy&quot;:&quot;&quot;,&quot;createdDate&quot;:&quot;2019-09-12T13:23:18.106Z&quot;,&quot;lastModifiedBy&quot;:&quot;&quot;,&quot;lastModifiedDate&quot;:&quot;2019-09-12T13:23:18.106Z&quot;,&quot;properties&quot;:{&quot;prefLabel&quot;:[{&quot;lang&quot;:&quot;en&quot;,&quot;value&quot;:&quot;Mercury&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;source&quot;:[],&quot;scope&quot;:[],&quot;termStyle&quot;:[],&quot;termFamily&quot;:[],&quot;termConjugation&quot;:[],&quot;termEquivalency&quot;:[],&quot;termInfo&quot;:[],&quot;wordClass&quot;:[],&quot;termHomographNumber&quot;:[],&quot;editorialNote&quot;:[],&quot;draftComment&quot;:[],&quot;historyNote&quot;:[],&quot;changeNote&quot;:[],&quot;status&quot;:[]},&quot;referrers&quot;:{},&quot;references&quot;:{}},{&quot;id&quot;:&quot;0218abd6-2b0c-4479-893c-ecdc33c636ff&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}},&quot;createdBy&quot;:&quot;&quot;,&quot;createdDate&quot;:&quot;2019-09-12T13:23:18.107Z&quot;,&quot;lastModifiedBy&quot;:&quot;&quot;,&quot;lastModifiedDate&quot;:&quot;2019-09-12T13:23:18.107Z&quot;,&quot;properties&quot;:{&quot;prefLabel&quot;:[{&quot;lang&quot;:&quot;fi&quot;,&quot;value&quot;:&quot;Venus&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;source&quot;:[],&quot;scope&quot;:[],&quot;termStyle&quot;:[],&quot;termFamily&quot;:[],&quot;termConjugation&quot;:[],&quot;termEquivalency&quot;:[],&quot;termInfo&quot;:[],&quot;wordClass&quot;:[],&quot;termHomographNumber&quot;:[],&quot;editorialNote&quot;:[],&quot;draftComment&quot;:[],&quot;historyNote&quot;:[],&quot;changeNote&quot;:[],&quot;status&quot;:[]},&quot;referrers&quot;:{},&quot;references&quot;:{}},{&quot;id&quot;:&quot;f94483c9-827b-4adb-a640-a307e653e196&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}},&quot;createdBy&quot;:&quot;&quot;,&quot;createdDate&quot;:&quot;2019-09-12T13:23:18.107Z&quot;,&quot;lastModifiedBy&quot;:&quot;&quot;,&quot;lastModifiedDate&quot;:&quot;2019-09-12T13:23:18.107Z&quot;,&quot;properties&quot;:{&quot;prefLabel&quot;:[{&quot;lang&quot;:&quot;en&quot;,&quot;value&quot;:&quot;Venus&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;source&quot;:[],&quot;scope&quot;:[],&quot;termStyle&quot;:[],&quot;termFamily&quot;:[],&quot;termConjugation&quot;:[],&quot;termEquivalency&quot;:[],&quot;termInfo&quot;:[],&quot;wordClass&quot;:[],&quot;termHomographNumber&quot;:[],&quot;editorialNote&quot;:[],&quot;draftComment&quot;:[],&quot;historyNote&quot;:[],&quot;changeNote&quot;:[],&quot;status&quot;:[]},&quot;referrers&quot;:{},&quot;references&quot;:{}},{&quot;id&quot;:&quot;cf268fcf-2473-4b29-a95f-b5cc0d820a4b&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}},&quot;createdBy&quot;:&quot;&quot;,&quot;createdDate&quot;:&quot;2019-09-12T13:23:18.107Z&quot;,&quot;lastModifiedBy&quot;:&quot;&quot;,&quot;lastModifiedDate&quot;:&quot;2019-09-12T13:23:18.107Z&quot;,&quot;properties&quot;:{&quot;prefLabel&quot;:[{&quot;lang&quot;:&quot;fi&quot;,&quot;value&quot;:&quot;Maa&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;source&quot;:[],&quot;scope&quot;:[],&quot;termStyle&quot;:[],&quot;termFamily&quot;:[],&quot;termConjugation&quot;:[],&quot;termEquivalency&quot;:[],&quot;termInfo&quot;:[],&quot;wordClass&quot;:[],&quot;termHomographNumber&quot;:[],&quot;editorialNote&quot;:[],&quot;draftComment&quot;:[],&quot;historyNote&quot;:[],&quot;changeNote&quot;:[],&quot;status&quot;:[]},&quot;referrers&quot;:{},&quot;references&quot;:{}},{&quot;id&quot;:&quot;dfd633fd-b03b-4818-9a2f-ef26e6763d5f&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}},&quot;createdBy&quot;:&quot;&quot;,&quot;createdDate&quot;:&quot;2019-09-12T13:23:18.107Z&quot;,&quot;lastModifiedBy&quot;:&quot;&quot;,&quot;lastModifiedDate&quot;:&quot;2019-09-12T13:23:18.107Z&quot;,&quot;properties&quot;:{&quot;prefLabel&quot;:[{&quot;lang&quot;:&quot;en&quot;,&quot;value&quot;:&quot;Earth&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;source&quot;:[],&quot;scope&quot;:[],&quot;termStyle&quot;:[],&quot;termFamily&quot;:[],&quot;termConjugation&quot;:[],&quot;termEquivalency&quot;:[],&quot;termInfo&quot;:[],&quot;wordClass&quot;:[],&quot;termHomographNumber&quot;:[],&quot;editorialNote&quot;:[],&quot;draftComment&quot;:[],&quot;historyNote&quot;:[],&quot;changeNote&quot;:[],&quot;status&quot;:[]},&quot;referrers&quot;:{},&quot;references&quot;:{}},{&quot;id&quot;:&quot;01389cdf-b653-439c-b508-0c590565acb9&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}},&quot;createdBy&quot;:&quot;&quot;,&quot;createdDate&quot;:&quot;2019-09-12T13:23:18.107Z&quot;,&quot;lastModifiedBy&quot;:&quot;&quot;,&quot;lastModifiedDate&quot;:&quot;2019-09-12T13:23:18.107Z&quot;,&quot;properties&quot;:{&quot;prefLabel&quot;:[{&quot;lang&quot;:&quot;fi&quot;,&quot;value&quot;:&quot;Mars&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;source&quot;:[],&quot;scope&quot;:[],&quot;termStyle&quot;:[],&quot;termFamily&quot;:[],&quot;termConjugation&quot;:[],&quot;termEquivalency&quot;:[],&quot;termInfo&quot;:[],&quot;wordClass&quot;:[],&quot;termHomographNumber&quot;:[],&quot;editorialNote&quot;:[],&quot;draftComment&quot;:[],&quot;historyNote&quot;:[],&quot;changeNote&quot;:[],&quot;status&quot;:[]},&quot;referrers&quot;:{},&quot;references&quot;:{}},{&quot;id&quot;:&quot;4766b1ad-2ca8-40bf-938c-65bff275f950&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}},&quot;createdBy&quot;:&quot;&quot;,&quot;createdDate&quot;:&quot;2019-09-12T13:23:18.108Z&quot;,&quot;lastModifiedBy&quot;:&quot;&quot;,&quot;lastModifiedDate&quot;:&quot;2019-09-12T13:23:18.108Z&quot;,&quot;properties&quot;:{&quot;prefLabel&quot;:[{&quot;lang&quot;:&quot;en&quot;,&quot;value&quot;:&quot;Mars&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;source&quot;:[],&quot;scope&quot;:[],&quot;termStyle&quot;:[],&quot;termFamily&quot;:[],&quot;termConjugation&quot;:[],&quot;termEquivalency&quot;:[],&quot;termInfo&quot;:[],&quot;wordClass&quot;:[],&quot;termHomographNumber&quot;:[],&quot;editorialNote&quot;:[],&quot;draftComment&quot;:[],&quot;historyNote&quot;:[],&quot;changeNote&quot;:[],&quot;status&quot;:[]},&quot;referrers&quot;:{},&quot;references&quot;:{}},{&quot;id&quot;:&quot;ef76bd5c-6e36-4b14-81b8-0d9fc10f5186&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}},&quot;createdBy&quot;:&quot;&quot;,&quot;createdDate&quot;:&quot;2019-09-12T13:23:18.108Z&quot;,&quot;lastModifiedBy&quot;:&quot;&quot;,&quot;lastModifiedDate&quot;:&quot;2019-09-12T13:23:18.108Z&quot;,&quot;properties&quot;:{&quot;prefLabel&quot;:[{&quot;lang&quot;:&quot;fi&quot;,&quot;value&quot;:&quot;Jupiter&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;source&quot;:[],&quot;scope&quot;:[],&quot;termStyle&quot;:[],&quot;termFamily&quot;:[],&quot;termConjugation&quot;:[],&quot;termEquivalency&quot;:[],&quot;termInfo&quot;:[],&quot;wordClass&quot;:[],&quot;termHomographNumber&quot;:[],&quot;editorialNote&quot;:[],&quot;draftComment&quot;:[],&quot;historyNote&quot;:[],&quot;changeNote&quot;:[],&quot;status&quot;:[]},&quot;referrers&quot;:{},&quot;references&quot;:{}},{&quot;id&quot;:&quot;f47e1117-d397-4560-b4e7-521519e5d010&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}},&quot;createdBy&quot;:&quot;&quot;,&quot;createdDate&quot;:&quot;2019-09-12T13:23:18.108Z&quot;,&quot;lastModifiedBy&quot;:&quot;&quot;,&quot;lastModifiedDate&quot;:&quot;2019-09-12T13:23:18.108Z&quot;,&quot;properties&quot;:{&quot;prefLabel&quot;:[{&quot;lang&quot;:&quot;en&quot;,&quot;value&quot;:&quot;Jupiter&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;source&quot;:[],&quot;scope&quot;:[],&quot;termStyle&quot;:[],&quot;termFamily&quot;:[],&quot;termConjugation&quot;:[],&quot;termEquivalency&quot;:[],&quot;termInfo&quot;:[],&quot;wordClass&quot;:[],&quot;termHomographNumber&quot;:[],&quot;editorialNote&quot;:[],&quot;draftComment&quot;:[],&quot;historyNote&quot;:[],&quot;changeNote&quot;:[],&quot;status&quot;:[]},&quot;referrers&quot;:{},&quot;references&quot;:{}},{&quot;id&quot;:&quot;af11e15c-3139-4660-b504-c26ec7f1b68e&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}},&quot;createdBy&quot;:&quot;&quot;,&quot;createdDate&quot;:&quot;2019-09-12T13:23:18.108Z&quot;,&quot;lastModifiedBy&quot;:&quot;&quot;,&quot;lastModifiedDate&quot;:&quot;2019-09-12T13:23:18.108Z&quot;,&quot;properties&quot;:{&quot;prefLabel&quot;:[{&quot;lang&quot;:&quot;fi&quot;,&quot;value&quot;:&quot;Saturnus&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;source&quot;:[],&quot;scope&quot;:[],&quot;termStyle&quot;:[],&quot;termFamily&quot;:[],&quot;termConjugation&quot;:[],&quot;termEquivalency&quot;:[],&quot;termInfo&quot;:[],&quot;wordClass&quot;:[],&quot;termHomographNumber&quot;:[],&quot;editorialNote&quot;:[],&quot;draftComment&quot;:[],&quot;historyNote&quot;:[],&quot;changeNote&quot;:[],&quot;status&quot;:[]},&quot;referrers&quot;:{},&quot;references&quot;:{}},{&quot;id&quot;:&quot;8bd1a59c-85be-4a64-9c80-f4dc120de2a1&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}},&quot;createdBy&quot;:&quot;&quot;,&quot;createdDate&quot;:&quot;2019-09-12T13:23:18.108Z&quot;,&quot;lastModifiedBy&quot;:&quot;&quot;,&quot;lastModifiedDate&quot;:&quot;2019-09-12T13:23:18.108Z&quot;,&quot;properties&quot;:{&quot;prefLabel&quot;:[{&quot;lang&quot;:&quot;en&quot;,&quot;value&quot;:&quot;Saturn&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;source&quot;:[],&quot;scope&quot;:[],&quot;termStyle&quot;:[],&quot;termFamily&quot;:[],&quot;termConjugation&quot;:[],&quot;termEquivalency&quot;:[],&quot;termInfo&quot;:[],&quot;wordClass&quot;:[],&quot;termHomographNumber&quot;:[],&quot;editorialNote&quot;:[],&quot;draftComment&quot;:[],&quot;historyNote&quot;:[],&quot;changeNote&quot;:[],&quot;status&quot;:[]},&quot;referrers&quot;:{},&quot;references&quot;:{}},{&quot;id&quot;:&quot;68d83cbb-48f4-42b3-9238-6e6400da6e64&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}},&quot;createdBy&quot;:&quot;&quot;,&quot;createdDate&quot;:&quot;2019-09-12T13:23:18.108Z&quot;,&quot;lastModifiedBy&quot;:&quot;&quot;,&quot;lastModifiedDate&quot;:&quot;2019-09-12T13:23:18.108Z&quot;,&quot;properties&quot;:{&quot;prefLabel&quot;:[{&quot;lang&quot;:&quot;fi&quot;,&quot;value&quot;:&quot;Uranus&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;source&quot;:[],&quot;scope&quot;:[],&quot;termStyle&quot;:[],&quot;termFamily&quot;:[],&quot;termConjugation&quot;:[],&quot;termEquivalency&quot;:[],&quot;termInfo&quot;:[],&quot;wordClass&quot;:[],&quot;termHomographNumber&quot;:[],&quot;editorialNote&quot;:[],&quot;draftComment&quot;:[],&quot;historyNote&quot;:[],&quot;changeNote&quot;:[],&quot;status&quot;:[]},&quot;referrers&quot;:{},&quot;references&quot;:{}},{&quot;id&quot;:&quot;fe3ada4a-18ca-4872-b4b8-872d701e0701&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}},&quot;createdBy&quot;:&quot;&quot;,&quot;createdDate&quot;:&quot;2019-09-12T13:23:18.108Z&quot;,&quot;lastModifiedBy&quot;:&quot;&quot;,&quot;lastModifiedDate&quot;:&quot;2019-09-12T13:23:18.108Z&quot;,&quot;properties&quot;:{&quot;prefLabel&quot;:[{&quot;lang&quot;:&quot;en&quot;,&quot;value&quot;:&quot;Uranus&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;source&quot;:[],&quot;scope&quot;:[],&quot;termStyle&quot;:[],&quot;termFamily&quot;:[],&quot;termConjugation&quot;:[],&quot;termEquivalency&quot;:[],&quot;termInfo&quot;:[],&quot;wordClass&quot;:[],&quot;termHomographNumber&quot;:[],&quot;editorialNote&quot;:[],&quot;draftComment&quot;:[],&quot;historyNote&quot;:[],&quot;changeNote&quot;:[],&quot;status&quot;:[]},&quot;referrers&quot;:{},&quot;references&quot;:{}},{&quot;id&quot;:&quot;eb6d74ea-9331-4a6a-95a4-350832d1dca4&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}},&quot;createdBy&quot;:&quot;&quot;,&quot;createdDate&quot;:&quot;2019-09-12T13:23:18.108Z&quot;,&quot;lastModifiedBy&quot;:&quot;&quot;,&quot;lastModifiedDate&quot;:&quot;2019-09-12T13:23:18.108Z&quot;,&quot;properties&quot;:{&quot;prefLabel&quot;:[{&quot;lang&quot;:&quot;fi&quot;,&quot;value&quot;:&quot;Neptunus&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;source&quot;:[],&quot;scope&quot;:[],&quot;termStyle&quot;:[],&quot;termFamily&quot;:[],&quot;termConjugation&quot;:[],&quot;termEquivalency&quot;:[],&quot;termInfo&quot;:[],&quot;wordClass&quot;:[],&quot;termHomographNumber&quot;:[],&quot;editorialNote&quot;:[],&quot;draftComment&quot;:[],&quot;historyNote&quot;:[],&quot;changeNote&quot;:[],&quot;status&quot;:[]},&quot;referrers&quot;:{},&quot;references&quot;:{}},{&quot;id&quot;:&quot;5272305c-91b5-429f-905b-59c8a68203c9&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}},&quot;createdBy&quot;:&quot;&quot;,&quot;createdDate&quot;:&quot;2019-09-12T13:23:18.108Z&quot;,&quot;lastModifiedBy&quot;:&quot;&quot;,&quot;lastModifiedDate&quot;:&quot;2019-09-12T13:23:18.108Z&quot;,&quot;properties&quot;:{&quot;prefLabel&quot;:[{&quot;lang&quot;:&quot;en&quot;,&quot;value&quot;:&quot;Neptune&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;source&quot;:[],&quot;scope&quot;:[],&quot;termStyle&quot;:[],&quot;termFamily&quot;:[],&quot;termConjugation&quot;:[],&quot;termEquivalency&quot;:[],&quot;termInfo&quot;:[],&quot;wordClass&quot;:[],&quot;termHomographNumber&quot;:[],&quot;editorialNote&quot;:[],&quot;draftComment&quot;:[],&quot;historyNote&quot;:[],&quot;changeNote&quot;:[],&quot;status&quot;:[]},&quot;referrers&quot;:{},&quot;references&quot;:{}},{&quot;id&quot;:&quot;a430f496-7dbd-45b7-892e-5847e4d5fb18&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Concept&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2004/02/skos/core#Concept&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}},&quot;createdBy&quot;:&quot;&quot;,&quot;createdDate&quot;:&quot;2019-09-12T13:23:18.105Z&quot;,&quot;lastModifiedBy&quot;:&quot;&quot;,&quot;lastModifiedDate&quot;:&quot;2019-09-12T13:23:18.105Z&quot;,&quot;properties&quot;:{&quot;definition&quot;:[{&quot;lang&quot;:&quot;fi&quot;,&quot;value&quot;:&quot;Merkuriuksen määritelmä&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;note&quot;:[],&quot;editorialNote&quot;:[],&quot;example&quot;:[],&quot;conceptScope&quot;:[],&quot;conceptClass&quot;:[],&quot;wordClass&quot;:[],&quot;changeNote&quot;:[],&quot;historyNote&quot;:[],&quot;status&quot;:[{&quot;lang&quot;:&quot;&quot;,&quot;value&quot;:&quot;DRAFT&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;notation&quot;:[],&quot;source&quot;:[]},&quot;referrers&quot;:{},&quot;references&quot;:{&quot;prefLabelXl&quot;:[{&quot;id&quot;:&quot;81923f05-ca33-4208-8842-85643b758686&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}}},{&quot;id&quot;:&quot;cc8a41aa-a2a2-44a0-a8e9-60e34426e8f3&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}}}],&quot;altLabelXl&quot;:[],&quot;notRecommendedSynonym&quot;:[],&quot;hiddenTerm&quot;:[],&quot;broader&quot;:[],&quot;narrower&quot;:[],&quot;closeMatch&quot;:[],&quot;related&quot;:[],&quot;isPartOf&quot;:[],&quot;hasPart&quot;:[],&quot;relatedMatch&quot;:[],&quot;exactMatch&quot;:[],&quot;searchTerm&quot;:[]}},{&quot;id&quot;:&quot;d1bf6e51-724c-4629-b460-4e3b42ede27e&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Concept&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2004/02/skos/core#Concept&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}},&quot;createdBy&quot;:&quot;&quot;,&quot;createdDate&quot;:&quot;2019-09-12T13:23:18.106Z&quot;,&quot;lastModifiedBy&quot;:&quot;&quot;,&quot;lastModifiedDate&quot;:&quot;2019-09-12T13:23:18.106Z&quot;,&quot;properties&quot;:{&quot;definition&quot;:[{&quot;lang&quot;:&quot;fi&quot;,&quot;value&quot;:&quot;Venuksen määritelmä&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;note&quot;:[],&quot;editorialNote&quot;:[],&quot;example&quot;:[],&quot;conceptScope&quot;:[],&quot;conceptClass&quot;:[],&quot;wordClass&quot;:[],&quot;changeNote&quot;:[],&quot;historyNote&quot;:[],&quot;status&quot;:[{&quot;lang&quot;:&quot;&quot;,&quot;value&quot;:&quot;INCOMPLETE&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;notation&quot;:[],&quot;source&quot;:[]},&quot;referrers&quot;:{},&quot;references&quot;:{&quot;prefLabelXl&quot;:[{&quot;id&quot;:&quot;0218abd6-2b0c-4479-893c-ecdc33c636ff&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}}},{&quot;id&quot;:&quot;f94483c9-827b-4adb-a640-a307e653e196&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}}}],&quot;altLabelXl&quot;:[],&quot;notRecommendedSynonym&quot;:[],&quot;hiddenTerm&quot;:[],&quot;broader&quot;:[{&quot;id&quot;:&quot;a430f496-7dbd-45b7-892e-5847e4d5fb18&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Concept&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2004/02/skos/core#Concept&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}}}],&quot;narrower&quot;:[],&quot;closeMatch&quot;:[],&quot;related&quot;:[],&quot;isPartOf&quot;:[],&quot;hasPart&quot;:[],&quot;relatedMatch&quot;:[],&quot;exactMatch&quot;:[],&quot;searchTerm&quot;:[]}},{&quot;id&quot;:&quot;8cf5f55f-9bca-4d97-9a65-0926f86bdedf&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Concept&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2004/02/skos/core#Concept&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}},&quot;createdBy&quot;:&quot;&quot;,&quot;createdDate&quot;:&quot;2019-09-12T13:23:18.107Z&quot;,&quot;lastModifiedBy&quot;:&quot;&quot;,&quot;lastModifiedDate&quot;:&quot;2019-09-12T13:23:18.107Z&quot;,&quot;properties&quot;:{&quot;definition&quot;:[{&quot;lang&quot;:&quot;fi&quot;,&quot;value&quot;:&quot;Maan määritelmä&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;note&quot;:[],&quot;editorialNote&quot;:[],&quot;example&quot;:[],&quot;conceptScope&quot;:[],&quot;conceptClass&quot;:[],&quot;wordClass&quot;:[],&quot;changeNote&quot;:[],&quot;historyNote&quot;:[],&quot;status&quot;:[{&quot;lang&quot;:&quot;&quot;,&quot;value&quot;:&quot;SUGGESTED&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;notation&quot;:[],&quot;source&quot;:[]},&quot;referrers&quot;:{},&quot;references&quot;:{&quot;prefLabelXl&quot;:[{&quot;id&quot;:&quot;cf268fcf-2473-4b29-a95f-b5cc0d820a4b&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}}},{&quot;id&quot;:&quot;dfd633fd-b03b-4818-9a2f-ef26e6763d5f&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}}}],&quot;altLabelXl&quot;:[],&quot;notRecommendedSynonym&quot;:[],&quot;hiddenTerm&quot;:[],&quot;broader&quot;:[{&quot;id&quot;:&quot;d1bf6e51-724c-4629-b460-4e3b42ede27e&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Concept&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2004/02/skos/core#Concept&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}}}],&quot;narrower&quot;:[],&quot;closeMatch&quot;:[],&quot;related&quot;:[],&quot;isPartOf&quot;:[],&quot;hasPart&quot;:[],&quot;relatedMatch&quot;:[],&quot;exactMatch&quot;:[],&quot;searchTerm&quot;:[]}},{&quot;id&quot;:&quot;09b33690-62d8-4a1c-9709-4ed2b659b19c&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Concept&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2004/02/skos/core#Concept&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}},&quot;createdBy&quot;:&quot;&quot;,&quot;createdDate&quot;:&quot;2019-09-12T13:23:18.107Z&quot;,&quot;lastModifiedBy&quot;:&quot;&quot;,&quot;lastModifiedDate&quot;:&quot;2019-09-12T13:23:18.107Z&quot;,&quot;properties&quot;:{&quot;definition&quot;:[{&quot;lang&quot;:&quot;fi&quot;,&quot;value&quot;:&quot;Marsin määritelmä&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;note&quot;:[],&quot;editorialNote&quot;:[],&quot;example&quot;:[],&quot;conceptScope&quot;:[],&quot;conceptClass&quot;:[],&quot;wordClass&quot;:[],&quot;changeNote&quot;:[],&quot;historyNote&quot;:[],&quot;status&quot;:[{&quot;lang&quot;:&quot;&quot;,&quot;value&quot;:&quot;VALID&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;notation&quot;:[],&quot;source&quot;:[]},&quot;referrers&quot;:{},&quot;references&quot;:{&quot;prefLabelXl&quot;:[{&quot;id&quot;:&quot;01389cdf-b653-439c-b508-0c590565acb9&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}}},{&quot;id&quot;:&quot;4766b1ad-2ca8-40bf-938c-65bff275f950&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}}}],&quot;altLabelXl&quot;:[],&quot;notRecommendedSynonym&quot;:[],&quot;hiddenTerm&quot;:[],&quot;broader&quot;:[{&quot;id&quot;:&quot;8cf5f55f-9bca-4d97-9a65-0926f86bdedf&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Concept&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2004/02/skos/core#Concept&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}}}],&quot;narrower&quot;:[],&quot;closeMatch&quot;:[],&quot;related&quot;:[{&quot;id&quot;:&quot;8cf5f55f-9bca-4d97-9a65-0926f86bdedf&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Concept&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2004/02/skos/core#Concept&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}}}],&quot;isPartOf&quot;:[],&quot;hasPart&quot;:[],&quot;relatedMatch&quot;:[],&quot;exactMatch&quot;:[],&quot;searchTerm&quot;:[]}},{&quot;id&quot;:&quot;d684220a-4634-4241-a832-7b0afc4b75c6&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Concept&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2004/02/skos/core#Concept&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}},&quot;createdBy&quot;:&quot;&quot;,&quot;createdDate&quot;:&quot;2019-09-12T13:23:18.108Z&quot;,&quot;lastModifiedBy&quot;:&quot;&quot;,&quot;lastModifiedDate&quot;:&quot;2019-09-12T13:23:18.108Z&quot;,&quot;properties&quot;:{&quot;definition&quot;:[{&quot;lang&quot;:&quot;fi&quot;,&quot;value&quot;:&quot;Jupiterin määritelmä&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;note&quot;:[],&quot;editorialNote&quot;:[],&quot;example&quot;:[],&quot;conceptScope&quot;:[],&quot;conceptClass&quot;:[],&quot;wordClass&quot;:[],&quot;changeNote&quot;:[],&quot;historyNote&quot;:[],&quot;status&quot;:[{&quot;lang&quot;:&quot;&quot;,&quot;value&quot;:&quot;VALID&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;notation&quot;:[],&quot;source&quot;:[]},&quot;referrers&quot;:{},&quot;references&quot;:{&quot;prefLabelXl&quot;:[{&quot;id&quot;:&quot;ef76bd5c-6e36-4b14-81b8-0d9fc10f5186&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}}},{&quot;id&quot;:&quot;f47e1117-d397-4560-b4e7-521519e5d010&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}}}],&quot;altLabelXl&quot;:[],&quot;notRecommendedSynonym&quot;:[],&quot;hiddenTerm&quot;:[],&quot;broader&quot;:[{&quot;id&quot;:&quot;09b33690-62d8-4a1c-9709-4ed2b659b19c&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Concept&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2004/02/skos/core#Concept&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}}}],&quot;narrower&quot;:[],&quot;closeMatch&quot;:[],&quot;related&quot;:[],&quot;isPartOf&quot;:[],&quot;hasPart&quot;:[],&quot;relatedMatch&quot;:[],&quot;exactMatch&quot;:[],&quot;searchTerm&quot;:[]}},{&quot;id&quot;:&quot;093ec614-10d4-40d8-8e06-02c58da5e6bc&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Concept&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2004/02/skos/core#Concept&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}},&quot;createdBy&quot;:&quot;&quot;,&quot;createdDate&quot;:&quot;2019-09-12T13:23:18.108Z&quot;,&quot;lastModifiedBy&quot;:&quot;&quot;,&quot;lastModifiedDate&quot;:&quot;2019-09-12T13:23:18.108Z&quot;,&quot;properties&quot;:{&quot;definition&quot;:[{&quot;lang&quot;:&quot;fi&quot;,&quot;value&quot;:&quot;Saturnuksen määritelmä&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;note&quot;:[],&quot;editorialNote&quot;:[],&quot;example&quot;:[],&quot;conceptScope&quot;:[],&quot;conceptClass&quot;:[],&quot;wordClass&quot;:[],&quot;changeNote&quot;:[],&quot;historyNote&quot;:[],&quot;status&quot;:[{&quot;lang&quot;:&quot;&quot;,&quot;value&quot;:&quot;SUPERSEDED&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;notation&quot;:[],&quot;source&quot;:[]},&quot;referrers&quot;:{},&quot;references&quot;:{&quot;prefLabelXl&quot;:[{&quot;id&quot;:&quot;af11e15c-3139-4660-b504-c26ec7f1b68e&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}}},{&quot;id&quot;:&quot;8bd1a59c-85be-4a64-9c80-f4dc120de2a1&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}}}],&quot;altLabelXl&quot;:[],&quot;notRecommendedSynonym&quot;:[],&quot;hiddenTerm&quot;:[],&quot;broader&quot;:[{&quot;id&quot;:&quot;d684220a-4634-4241-a832-7b0afc4b75c6&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Concept&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2004/02/skos/core#Concept&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}}}],&quot;narrower&quot;:[],&quot;closeMatch&quot;:[],&quot;related&quot;:[],&quot;isPartOf&quot;:[],&quot;hasPart&quot;:[],&quot;relatedMatch&quot;:[],&quot;exactMatch&quot;:[],&quot;searchTerm&quot;:[]}},{&quot;id&quot;:&quot;111dacfc-f7e1-4e8c-bd5b-f46b5601301c&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Concept&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2004/02/skos/core#Concept&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}},&quot;createdBy&quot;:&quot;&quot;,&quot;createdDate&quot;:&quot;2019-09-12T13:23:18.108Z&quot;,&quot;lastModifiedBy&quot;:&quot;&quot;,&quot;lastModifiedDate&quot;:&quot;2019-09-12T13:23:18.108Z&quot;,&quot;properties&quot;:{&quot;definition&quot;:[{&quot;lang&quot;:&quot;fi&quot;,&quot;value&quot;:&quot;Uranuksen määritelmä&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;note&quot;:[],&quot;editorialNote&quot;:[],&quot;example&quot;:[],&quot;conceptScope&quot;:[],&quot;conceptClass&quot;:[],&quot;wordClass&quot;:[],&quot;changeNote&quot;:[],&quot;historyNote&quot;:[],&quot;status&quot;:[{&quot;lang&quot;:&quot;&quot;,&quot;value&quot;:&quot;RETIRED&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;notation&quot;:[],&quot;source&quot;:[]},&quot;referrers&quot;:{},&quot;references&quot;:{&quot;prefLabelXl&quot;:[{&quot;id&quot;:&quot;68d83cbb-48f4-42b3-9238-6e6400da6e64&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}}},{&quot;id&quot;:&quot;fe3ada4a-18ca-4872-b4b8-872d701e0701&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}}}],&quot;altLabelXl&quot;:[],&quot;notRecommendedSynonym&quot;:[],&quot;hiddenTerm&quot;:[],&quot;broader&quot;:[{&quot;id&quot;:&quot;093ec614-10d4-40d8-8e06-02c58da5e6bc&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Concept&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2004/02/skos/core#Concept&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}}}],&quot;narrower&quot;:[],&quot;closeMatch&quot;:[],&quot;related&quot;:[],&quot;isPartOf&quot;:[],&quot;hasPart&quot;:[],&quot;relatedMatch&quot;:[],&quot;exactMatch&quot;:[],&quot;searchTerm&quot;:[]}},{&quot;id&quot;:&quot;83c7ebcb-af0c-40e6-b5f5-e5f13cea68c0&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Concept&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2004/02/skos/core#Concept&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}},&quot;createdBy&quot;:&quot;&quot;,&quot;createdDate&quot;:&quot;2019-09-12T13:23:18.108Z&quot;,&quot;lastModifiedBy&quot;:&quot;&quot;,&quot;lastModifiedDate&quot;:&quot;2019-09-12T13:23:18.108Z&quot;,&quot;properties&quot;:{&quot;definition&quot;:[{&quot;lang&quot;:&quot;fi&quot;,&quot;value&quot;:&quot;Neptunuksen määritelmä&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;note&quot;:[],&quot;editorialNote&quot;:[],&quot;example&quot;:[],&quot;conceptScope&quot;:[],&quot;conceptClass&quot;:[],&quot;wordClass&quot;:[],&quot;changeNote&quot;:[],&quot;historyNote&quot;:[],&quot;status&quot;:[{&quot;lang&quot;:&quot;&quot;,&quot;value&quot;:&quot;INVALID&quot;,&quot;regex&quot;:&quot;(?s)^.*$&quot;}],&quot;notation&quot;:[],&quot;source&quot;:[]},&quot;referrers&quot;:{},&quot;references&quot;:{&quot;prefLabelXl&quot;:[{&quot;id&quot;:&quot;eb6d74ea-9331-4a6a-95a4-350832d1dca4&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}}},{&quot;id&quot;:&quot;5272305c-91b5-429f-905b-59c8a68203c9&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Term&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2008/05/skos-xl#Label&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}}}],&quot;altLabelXl&quot;:[],&quot;notRecommendedSynonym&quot;:[],&quot;hiddenTerm&quot;:[],&quot;broader&quot;:[{&quot;id&quot;:&quot;111dacfc-f7e1-4e8c-bd5b-f46b5601301c&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Concept&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2004/02/skos/core#Concept&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}}}],&quot;narrower&quot;:[],&quot;closeMatch&quot;:[],&quot;related&quot;:[],&quot;isPartOf&quot;:[{&quot;id&quot;:&quot;093ec614-10d4-40d8-8e06-02c58da5e6bc&quot;,&quot;type&quot;:{&quot;id&quot;:&quot;Concept&quot;,&quot;uri&quot;:&quot;http://www.w3.org/2004/02/skos/core#Concept&quot;,&quot;graph&quot;:{&quot;id&quot;:&quot;c6afd76c-8a60-456c-a9ae-84c648d56c8e&quot;}}}],&quot;hasPart&quot;:[],&quot;relatedMatch&quot;:[],&quot;exactMatch&quot;:[],&quot;searchTerm&quot;:[]}}]}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${terminologyHostname}</stringProp>
+          <stringProp name="HTTPSampler.port">${port}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/frontend/modify</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">true</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request: Delete vocabulary" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="graphId" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${vocabularyId}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">graphId</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${terminologyHostname}</stringProp>
+          <stringProp name="HTTPSampler.port">${port}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/frontend/vocabulary</stringProp>
+          <stringProp name="HTTPSampler.method">DELETE</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">true</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="StatGraphVisualizer" testclass="ResultCollector" testname="Aggregate Graph" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="RespTimeGraphVisualizer" testclass="ResultCollector" testname="Response Time Graph" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
